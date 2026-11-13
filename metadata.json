@@ -1,0 +1,6 @@
+{
+  "name": "Make Real - HTML to Interactive App",
+  "description": "Transform raw HTML templates and mockups into fully functional, interactive React applications with hotlinked image extraction and live state.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

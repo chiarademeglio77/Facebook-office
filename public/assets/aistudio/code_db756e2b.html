@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#eaedff", "surface-container-high": "#e2e7ff", "outline": "#777587", "secondary-fixed-dim": "#ffb2b7", "secondary": "#b90538", "primary": "#3525cd", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface": "#faf8ff", "on-primary-fixed": "#0f0069", "secondary-container": "#dc2c4f", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "tertiary": "#005338", "on-secondary-container": "#fffbff", "on-secondary-fixed": "#40000d", "secondary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3323cc", "inverse-on-surface": "#eef0ff", "outline-variant": "#c7c4d8", "on-surface-variant": "#464555", "on-background": "#131b2e", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "primary-fixed": "#e2dfff", "tertiary-container": "#006e4b", "tertiary-fixed": "#6ffbbe", "surface-tint": "#4d44e3", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "on-tertiary-container": "#67f4b7", "surface-container-highest": "#dae2fd", "error": "#ba1a1a", "surface-variant": "#dae2fd", "background": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "primary-container": "#4f46e5", "primary-fixed-dim": "#c3c0ff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "on-secondary-fixed-variant": "#92002a", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Huddle App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MGCN6v3pyV3MQc4tavWdLO1IY_qaRo2yql7H5Yz9PMK41FhSv9HdDQsbhEFF_AiKja3sUIYRmFnfzP91BkmLQoNDTPbdTaRctyhGzxIMTpogHbkkgktZ68hEVsiplHIj11ylD4Bra_rJnFrUjdcJ8HYg_5gkOdzDd9DNvezV75zGVA-x7ER3U4pFkA8k8n26uJX86-vZSA_P9PqsDZYGsuGwuP57PedmvcR98UUR"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Huddle</span><span class="font-label-sm text-label-sm text-on-surface-variant">Company Feed</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Floor 3 · 42 Teammates In</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxLIkHxNSDl8eQ_KePkA71YXAW0TEQjTEL3ZTto4bFO15VQt3gwsIRVgkVtQiY0wHcyGM-1cVu9niH3gqytHNXLjkkIVZi-47v5yZDTyG3J-SzSXzofuuKVxIELfH5g_Ufg2-geU2TxpeBATVlcTLI5abHA_yR_P7Cyu8Q5PDp5yEGB2T4u7x4rR5BgOojV90_gpL4xJfDruA3nyJbnuj07kaXSIalmZRB375n347"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Micro Office Pulse Toast Banner -->
+<div class="px-space-md pt-space-xs pb-space-sm">
+<div class="bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">celebration</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Town Square · Floor 3 Vibes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">4 new dream personas unlocked today! ✨</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0 shadow-sm hover:opacity-95 active:scale-95 transition-all">
+        View All
+      </button>
+</div>
+</div>
+<!-- Section: Dream Job of the Week Stories Carousel -->
+<section class="flex flex-col pt-space-xs">
+<div class="flex items-center justify-between px-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Dream Roles Spotlight</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider bg-secondary-fixed px-2 py-0.5 rounded-full">
+        Weekly Mix
+      </span>
+</div>
+<!-- Horizontal Snap Scroller -->
+<div class="flex gap-space-md overflow-x-auto px-space-md pb-space-sm snap-x snap-mandatory">
+<!-- Card 1: Maya Lin (Astrobiologist) -->
+<div class="snap-start shrink-0 w-44 rounded-xl overflow-hidden bg-surface-container shadow-md flex flex-col relative group cursor-pointer transition-transform duration-200 active:scale-95">
+<div class="relative h-60 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant digital portrait of a cheerful East Asian woman scientist in a sleek cinematic deep space astronaut suit, futuristic luminescent helmet ring with indigo and soft magenta neon reflections, cosmos and nebulae in background, soft editorial lighting, hyper-realistic, friendly confident expression, modern high tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Xlrc36pdvBQDsCnfNolxTAMPMq8G0Gre_VzTvrbLoFrkL3ElLr_XzBmdbIyTQROe3J-HI5gLyR9QWnolfNCwzm95i23sohvenRReyWX-oWvuPuPYM_QjaxLUBWaVkDViIl-bwq4hgVk8BVZPXSBO_TiTAm1LWevQDoaX9kroocCLqtcwHtqq_9fYW5GtISCAjcz5pb6xRiwrW43s7XwFDHJ3ItdaXBFjxGOlskks"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<!-- Dream Role Pill Tag -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1 bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-primary" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-label-sm text-label-sm text-on-surface">Dream Role</span>
+</div>
+<!-- Teammate Name & Title Details -->
+<div class="absolute bottom-2.5 left-2.5 right-2.5 text-inverse-on-surface">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold block truncate">Astrobiologist</span>
+<h3 class="font-title-md text-title-md text-white font-bold leading-tight truncate">Maya Lin</h3>
+<span class="font-body-sm text-[11px] text-surface-container-highest block opacity-90 truncate">Senior UX Architect</span>
+</div>
+</div>
+<div class="p-2 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">48</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Floor 3 · Desk 14</span>
+</div>
+</div>
+<!-- Card 2: David Chen (Sourdough Baker) -->
+<div class="snap-start shrink-0 w-44 rounded-xl overflow-hidden bg-surface-container shadow-md flex flex-col relative group cursor-pointer transition-transform duration-200 active:scale-95">
+<div class="relative h-60 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Charming cinematic portrait of a smiling Asian male backend engineer reimagined as an artisanal sourdough master baker, wearing a crisp linen apron and baker cap, dusting flour beside a glowing brick wood-fired hearth oven filled with crusty golden sourdough boules, warm amber and honey backlight, soft steam rising, cozy European bakery ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG7z8qhyfqNR3ILsD_2f-GdENPhXCUlOtP64dZOEOCgcojf_8ubVTS-XWJ39ivv1w7mkZ5pK8f36K0qi1Ymd6QejHe_lSgILGxCEj06GE2k5f6gl_ah8qoi_yz3mmwrI0j3bWROxU8KlIpjrbKPwgV2NtG3HYvfoHXK3yZ-mtmDFBYD_iRN3d7cfq3mruvuc1gIgVmUxn5wbr6FXm8AeRKuVCxNZ01PHlBlVsANq1z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1 bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+<span class="font-label-sm text-label-sm text-on-surface">Dream Role</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 text-inverse-on-surface">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold block truncate">Sourdough Artisan</span>
+<h3 class="font-title-md text-title-md text-white font-bold leading-tight truncate">David Chen</h3>
+<span class="font-body-sm text-[11px] text-surface-container-highest block opacity-90 truncate">Staff Backend Lead</span>
+</div>
+</div>
+<div class="p-2 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">62</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Floor 3 · Desk 28</span>
+</div>
+</div>
+<!-- Card 3: Elena Rostova (F1 Pit Crew Chief) -->
+<div class="snap-start shrink-0 w-44 rounded-xl overflow-hidden bg-surface-container shadow-md flex flex-col relative group cursor-pointer transition-transform duration-200 active:scale-95">
+<div class="relative h-60 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Action-packed high energy portrait of a dynamic European woman with braided hair dressed as a Formula 1 racing pit crew chief, wearing branded high-tech racing team jumpsuit with radio headset, holding electronic pneumatic tire wrench, sleek race cars blurred speeding in pit lane behind her, vibrant electric blue and crimson track lights, mist and high octane excitement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJCb5mWXMVATofHSBARw6KnIi6X97kQlrQsLq7gg5XR8_vlt_ZWWKcKPKGyaFujSd3yVcIlIVE6K0P2hluT8wAoFSRGHbFVlzZ-9DUZWaFPtdDn_ujvuQ7nvaktRsUX-flyr5u09eY_hYKs44vqNUgTGUN50qez16i_tDbgHDP7n9MwwP_wsi-brdhCIQIGFdzHdbO_itRz7fliEfRlkXrVe0A6PlQcUSb4RwzpSDY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1 bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="font-label-sm text-label-sm text-on-surface">Dream Role</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 text-inverse-on-surface">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold block truncate">Pit Crew Chief</span>
+<h3 class="font-title-md text-title-md text-white font-bold leading-tight truncate">Elena Rostova</h3>
+<span class="font-body-sm text-[11px] text-surface-container-highest block opacity-90 truncate">People Ops Partner</span>
+</div>
+</div>
+<div class="p-2 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">39</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Floor 2 · Lounge</span>
+</div>
+</div>
+<!-- Card 4: Interactive Prompt to Generate Your Own -->
+<div class="snap-start shrink-0 w-44 rounded-xl bg-gradient-to-br from-primary-fixed via-surface-container-high to-surface-container-lowest p-space-md flex flex-col justify-between items-center text-center shadow-md relative group cursor-pointer active:scale-95 transition-transform">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md mt-4">
+<span class="material-symbols-outlined text-[28px] animate-spin" style="animation-duration: 9s;">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-1 my-2">
+<span class="font-title-md text-title-md text-on-primary-fixed font-bold leading-snug">Generate Your Dream Role</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-relaxed">Let AI reimagine your secret passion persona</span>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-tint active:scale-95 transition-all flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Create Now
+        </button>
+</div>
+</div>
+</section>
+<!-- Feed Filter Chips (Horizontal Scrolling Pills) -->
+<div class="px-space-md pt-space-sm pb-space-sm flex gap-space-xs overflow-x-auto no-scrollbar">
+<button class="shrink-0 bg-primary text-on-primary px-3.5 py-1.5 rounded-full font-label-md text-label-md shadow-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">forum</span>
+      All Company
+    </button>
+<button class="shrink-0 bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">workspace_premium</span>
+      Shoutouts &amp; Kudos ⭐
+    </button>
+<button class="shrink-0 bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_cafe</span>
+      Office Life ☕
+    </button>
+<button class="shrink-0 bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">flag</span>
+      Project Milestones
+    </button>
+</div>
+<!-- Feed Content Stream -->
+<div class="px-space-md flex flex-col gap-space-md pt-space-xs">
+<!-- POST 1: High Vitality Kudos Card -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Top Decorative Accent -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary-container via-primary-container to-tertiary-container"></div>
+<!-- Giver & Receiver Header -->
+<div class="flex items-start justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of Sarah Jenkins, an enthusiastic woman product manager wearing casual office attire with round stylish spectacles and a warm smile, softly lit natural workplace setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4W2BtKw7idcesxO3ooWkfb_M4ujCZIw5M_UceCAhAQSvRep3Ko2kykFm6EW4e3tE6Il1oQc6MkVQphUOIXgQ1p1VmUjXdn3E8OPcZH0UNwa3XO_nZLahaY2SnRwfht_g6eEGk5y5Lwpa08iWjGDaKsVvkUH_9Nhcu8nmllEoGuUMojv1TatUcRk14NkJksPcvfGx48KTnc39S13zX_yx-E3r35zLG5z_mjK99uQxR"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-[9px] shadow-sm">
+              ✓
+            </span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">gave kudos to</span>
+<span class="font-title-md text-title-md text-primary font-bold truncate">@Marcus Bell</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Platform · 24m ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Floor 3 East</span>
+</div>
+</div>
+</div>
+<button aria-label="Post Options" class="text-on-surface-variant hover:text-on-surface w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<!-- Badge Showcase Banner -->
+<div class="bg-secondary-fixed/50 rounded-xl p-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-secondary-fixed font-bold">Awarded: Problem Solver 🏆</span>
+<span class="font-body-sm text-[12px] text-on-secondary-fixed-variant truncate">Hero of the production cluster recovery</span>
+</div>
+</div>
+<!-- Kudos Body Text -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Huge shoutout to <span class="font-semibold text-primary">@Marcus</span> for rescuing our production deployment at midnight! Not only did he trace the concurrency deadlock in record time, but he also kept team morale rock high. Coffee on me all week long! ☕🚀
+      </p>
+<!-- Receiver Card Highlight -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Headshot of Marcus Bell, a calm, friendly black male software engineer in a navy crewneck sweater, sitting at a desk with subtle dual monitor glow in a modern open workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADEF8VbMd4-g4OsUYMO4rA1qAieL9n9-V8G8I_j4wbFCxLLzIiZzif2QrJIGjZHUzTNdO7GssCpdKEPjlcjUV6wzqP6n_4-yztxm45Mmz0uQKLRhbp7v2bO61MUBK76fM4MwtkgSf-IAAXHG72lM6BuxoFzhGPOUv2-yuX_1HdsPyjeG05vmprr2fLergwey1OyTOmhJzG0M_tTqgMCFC1To9HMyx9JZJfom2LAU9Z"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Marcus Bell</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Lead Reliability Engineer · Desk 3-41</span>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm hover:opacity-90 active:scale-95 transition-all">
+          Say Thanks
+        </button>
+</div>
+<!-- Live Interactive Kudos Reactions Bar -->
+<div class="flex items-center gap-1.5 flex-wrap pt-1" id="kudos-reactions-row">
+<!-- Reaction 1: Claps -->
+<button class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface-variant hover:bg-secondary-fixed/40 transition-all active:scale-95 group" onclick="toggleReaction(this)">
+<span class="text-[14px]">👏</span>
+<span class="font-label-md text-label-md count">24</span>
+</button>
+<!-- Reaction 2: Hearts -->
+<button class="flex items-center gap-1.5 bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded-full shadow-sm transition-all active:scale-95 group" onclick="toggleReaction(this)">
+<span class="text-[14px]">❤️</span>
+<span class="font-label-md text-label-md font-bold count">18</span>
+</button>
+<!-- Reaction 3: Fire -->
+<button class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface-variant hover:bg-secondary-fixed/40 transition-all active:scale-95 group" onclick="toggleReaction(this)">
+<span class="text-[14px]">🔥</span>
+<span class="font-label-md text-label-md count">9</span>
+</button>
+<!-- Reaction 4: Rocket -->
+<button class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface-variant hover:bg-secondary-fixed/40 transition-all active:scale-95 group" onclick="toggleReaction(this)">
+<span class="text-[14px]">🚀</span>
+<span class="font-label-md text-label-md count">5</span>
+</button>
+<!-- Teammate Avatar Stack of Reactors -->
+<div class="flex items-center -space-x-2 ml-auto">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary text-[10px] font-bold flex items-center justify-center shadow-sm">
+            +52
+          </div>
+</div>
+</div>
+<!-- Comment Teaser Bar -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-space-sm mt-1">
+<img alt="Me" class="w-6 h-6 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxLIkHxNSDl8eQ_KePkA71YXAW0TEQjTEL3ZTto4bFO15VQt3gwsIRVgkVtQiY0wHcyGM-1cVu9niH3gqytHNXLjkkIVZi-47v5yZDTyG3J-SzSXzofuuKVxIELfH5g_Ufg2-geU2TxpeBATVlcTLI5abHA_yR_P7Cyu8Q5PDp5yEGB2T4u7x4rR5BgOojV90_gpL4xJfDruA3nyJbnuj07kaXSIalmZRB375n347"/>
+<input class="bg-transparent flex-1 font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-outline" placeholder="Add a sweet note or emoji cheer..." type="text"/>
+<button class="text-primary hover:text-primary-container p-1 rounded">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</article>
+<!-- POST 2: Dream Job Unlocked & Fun Community Poll -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-sm">
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Natural documentary headshot of David Chen, approachable tech lead with wire-frame glasses, smiling gently in casual dark denim shirt against blurred office monitors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATykQvKF6FrGmXiWfm1yEsaZTzq8-1s5dMmHN6IhvrWhcTyBnYma546zVrU_CKptb0VhvEMYnb3S_DQoobgOn9vqMj82ws-zrpVTEkwT7qT5gfLClERfs8Ub8xN-2V0bm7tRfrB0cwscnUA5utOb_GSNPF6i5TqtAWHtzcznvu6PnkztTur64duQN_ctNqAq-damD7Ptpp086cWvI3meXzO2GEPmsHMQhlySdGstJT"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface font-bold">David Chen</span>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded-full font-bold">
+                Dream Unlocked
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unlocked via Huddle Dream AI · 1h ago</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<!-- Description -->
+<p class="font-body-md text-body-md text-on-surface">
+        After 8 years of database indexing, I asked Huddle AI to generate my alternate career universe... Meet the Parisian Chocolatier version of me! 🍫👨‍🍳
+      </p>
+<!-- Side-by-Side Comparison Bento Grid -->
+<div class="grid grid-cols-2 gap-space-sm rounded-xl overflow-hidden bg-surface-container p-2">
+<!-- Real Life Box -->
+<div class="flex flex-col gap-1.5">
+<div class="relative h-44 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Real office snapshot of a software engineer at a standing desk typing on laptop, dual monitors with programming code, mug of tea on desk, sunny modern industrial tech office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX1u_WyjcZwBV3Gn7iSrwGoDq7lblIEXTmu1lzLzm2tmc8kW-5Vtvq-9T2m8xy2941sPO8nhb3vj80mUWmpwXazY-7hMOpHrSCgrm4yqXbp8DmlfhMM_YAhCCcxtWW_keQ51IejmTYldz_zKYo2y4bFnXZdtfDjuMpmzYiUNQn9A5woQEjods_H9_JDpguzwU6P7z6j3i_Y7L9fbxpoXbXjnQHfdKUjyrRTuytawMK"/>
+<span class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-[10px] px-2 py-0.5 rounded-full">
+              Real Life: Backend Lead
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center font-medium">99.9% Uptime Dev</span>
+</div>
+<!-- Dream Persona Box -->
+<div class="flex flex-col gap-1.5">
+<div class="relative h-44 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artistic cinematic photography of a handsome Asian male master pastry chef delicately dusting cocoa powder on handcrafted dark chocolate truffles, surrounded by copper pans and spun sugar sculptures, moody Parisian patisserie kitchen, golden candlelight highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSUaivXxMLFMqc8QqkdjV2M1EuvF_q_gNByc8XefcSeRr6qC3NAIbXU2m5F0QSzJPfTEdlfC8sm--ou9YNV5IHmpdxmKZ-9O0xuZa1V2WQXEgD71BWYVveQmVzT8krEhMqH-1mTmGGMR2FYVBlIPHIFEbFsL2_iFvTRFfXpIEiuuywofw5EaHpT7pHtjNIiCO5VTCUnPiX5rU_mCkm1elVkBeSqQH23wdbBBAErcI"/>
+<span class="absolute bottom-2 left-2 bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+              Dream Persona
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-primary text-center font-bold">Master Chocolatier 🍫</span>
+</div>
+</div>
+<!-- Fun Community Accuracy Poll -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs mt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Team Accuracy Verdict:</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">68 Votes</span>
+</div>
+<!-- Poll Option 1 -->
+<button class="w-full bg-surface-container-lowest hover:bg-surface-container rounded-lg p-2.5 flex items-center justify-between text-left shadow-sm active:scale-98 transition-all">
+<span class="font-label-md text-label-md text-on-surface">🥐 100% Him on Weekends</span>
+<div class="flex items-center gap-2">
+<div class="w-16 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[74%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">74%</span>
+</div>
+</button>
+<!-- Poll Option 2 -->
+<button class="w-full bg-surface-container-lowest hover:bg-surface-container rounded-lg p-2.5 flex items-center justify-between text-left shadow-sm active:scale-98 transition-all">
+<span class="font-label-md text-label-md text-on-surface">🧁 Needs more flour</span>
+<div class="flex items-center gap-2">
+<div class="w-16 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full w-[18%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">18%</span>
+</div>
+</button>
+<!-- Poll Option 3 -->
+<button class="w-full bg-surface-container-lowest hover:bg-surface-container rounded-lg p-2.5 flex items-center justify-between text-left shadow-sm active:scale-98 transition-all">
+<span class="font-label-md text-label-md text-on-surface">😂 Total plot twist!</span>
+<div class="flex items-center gap-2">
+<div class="w-16 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[8%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">8%</span>
+</div>
+</button>
+</div>
+<!-- Action Row -->
+<div class="flex items-center justify-between pt-1">
+<button class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+          34 Loves
+        </button>
+<button class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-3 py-1.5 rounded-full flex items-center gap-1 hover:bg-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+          Remix David's Prompt
+        </button>
+</div>
+</article>
+<!-- POST 3: Office Social Event Card -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-sm relative">
+<!-- Event Tag -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold shrink-0">
+<span class="material-symbols-outlined text-[22px]">sports_esports</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Culture Committee</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Social &amp; Hangouts · 3h ago</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full font-bold">
+          Happening Today
+        </span>
+</div>
+<!-- Visual Card & Details -->
+<div class="rounded-xl overflow-hidden bg-surface-container relative">
+<div class="h-36 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Lively scene of colleagues gathered around an expansive wooden table in a stylish modern office penthouse lounge playing modern board games and holding craft beer glasses, warm bistro fairy lights strung across ceiling, laughing together, cozy sunset glow through floor-to-ceiling city skyline windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUG1w63DJjkyqo0HY8R0FLQpTOGzSc0eoGQVl62HrLGXb0RHAi84egRH-oUJCZXQwPS2BPBlDlJ2RePS0WJMjuCPhXERcSTLFNLuHGXh3Q8iiS9IhNRGEV9TIoQ99hsWRGc3oVkKYsjQzQDZGSlWjgAgDbUp1F3g6PSv-pC0FhTeksk7b_eRxKxekzxcnzT1ZrMJI4qtOc4BC4puKJB5_A3HRbyoSSjPDg-D6KLYWc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-inverse-on-surface">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-white font-bold">Board Game &amp; Craft Beer Thursday</span>
+<span class="font-body-sm text-[12px] text-surface-container-highest">Today @ 5:30 PM · 4th Floor Lounge</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RSVP Meta & Action -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">32 Going</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">· 8 Interested</span>
+</div>
+<div class="flex items-center -space-x-1.5 mt-1">
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary text-[8px] font-bold flex items-center justify-center">M</div>
+<div class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary text-[8px] font-bold flex items-center justify-center">S</div>
+<div class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary text-[8px] font-bold flex items-center justify-center">D</div>
+<div class="w-5 h-5 rounded-full bg-surface-tint text-on-primary text-[8px] font-bold flex items-center justify-center">E</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-full shadow-md hover:bg-surface-tint active:scale-95 transition-all flex items-center gap-1.5" id="rsvp-button" onclick="toggleRsvp(this)">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="rsvp-text">I'll be there 🎉</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Floating Sticky Action Button (Delight Trigger) -->
+<div class="fixed bottom-20 right-4 z-40">
+<button class="bg-gradient-to-r from-secondary-container via-primary-container to-surface-tint text-on-primary rounded-full px-4 py-3 shadow-xl hover:shadow-2xl active:scale-95 transition-all flex items-center gap-2 group">
+<div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-white">volunteer_activism</span>
+</div>
+<span class="font-label-md text-label-md font-bold tracking-wide pr-1">Give Kudos</span>
+</button>
+</div>
+</div>
+<!-- Client-side Delightful Micro-Interactions -->
+<script>
+  function toggleReaction(btn) {
+    const countEl = btn.querySelector('.count');
+    let currentCount = parseInt(countEl.textContent, 10);
+    const hasReacted = btn.getAttribute('data-reacted') === 'true';
+
+    if (!hasReacted) {
+      countEl.textContent = currentCount + 1;
+      btn.setAttribute('data-reacted', 'true');
+      btn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      
+      // Micro-bounce
+      btn.animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.2)' },
+        { transform: 'scale(1)' }
+      ], { duration: 250, easing: 'ease-out' });
+    } else {
+      countEl.textContent = currentCount - 1;
+      btn.setAttribute('data-reacted', 'false');
+      btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    }
+  }
+
+  function toggleRsvp(btn) {
+    const textEl = document.getElementById('rsvp-text');
+    const isAttending = btn.getAttribute('data-attending') === 'true';
+
+    if (!isAttending) {
+      btn.setAttribute('data-attending', 'true');
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-tertiary-container');
+      textEl.textContent = 'Attending! 🥳';
+    } else {
+      btn.setAttribute('data-attending', 'false');
+      btn.classList.remove('bg-tertiary-container');
+      btn.classList.add('bg-primary');
+      textEl.textContent = "I'll be there 🎉";
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="office-map" href="#"><span class="material-symbols-outlined text-[24px]">map</span><span class="font-label-sm text-label-sm">Map</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="company-feed" href="#"><span class="material-symbols-outlined text-[24px]">forum</span><span class="font-label-sm text-label-sm">Feed</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="dream-ai" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[8px] leading-tight shadow-sm">AI</span></div><span class="font-label-sm text-label-sm">Dream AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

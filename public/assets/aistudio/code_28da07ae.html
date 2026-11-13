@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#eaedff", "surface-container-high": "#e2e7ff", "outline": "#777587", "secondary-fixed-dim": "#ffb2b7", "secondary": "#b90538", "primary": "#3525cd", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface": "#faf8ff", "on-primary-fixed": "#0f0069", "secondary-container": "#dc2c4f", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "tertiary": "#005338", "on-secondary-container": "#fffbff", "on-secondary-fixed": "#40000d", "secondary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3323cc", "inverse-on-surface": "#eef0ff", "outline-variant": "#c7c4d8", "on-surface-variant": "#464555", "on-background": "#131b2e", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "primary-fixed": "#e2dfff", "tertiary-container": "#006e4b", "tertiary-fixed": "#6ffbbe", "surface-tint": "#4d44e3", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "on-tertiary-container": "#67f4b7", "surface-container-highest": "#dae2fd", "error": "#ba1a1a", "surface-variant": "#dae2fd", "background": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "primary-container": "#4f46e5", "primary-fixed-dim": "#c3c0ff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "on-secondary-fixed-variant": "#92002a", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Huddle App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MGCN6v3pyV3MQc4tavWdLO1IY_qaRo2yql7H5Yz9PMK41FhSv9HdDQsbhEFF_AiKja3sUIYRmFnfzP91BkmLQoNDTPbdTaRctyhGzxIMTpogHbkkgktZ68hEVsiplHIj11ylD4Bra_rJnFrUjdcJ8HYg_5gkOdzDd9DNvezV75zGVA-x7ER3U4pFkA8k8n26uJX86-vZSA_P9PqsDZYGsuGwuP57PedmvcR98UUR"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Huddle</span><span class="font-label-sm text-label-sm text-on-surface-variant">Office Map</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Floor 3 · 42 Teammates In</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxLIkHxNSDl8eQ_KePkA71YXAW0TEQjTEL3ZTto4bFO15VQt3gwsIRVgkVtQiY0wHcyGM-1cVu9niH3gqytHNXLjkkIVZi-47v5yZDTyG3J-SzSXzofuuKVxIELfH5g_Ufg2-geU2TxpeBATVlcTLI5abHA_yR_P7Cyu8Q5PDp5yEGB2T4u7x4rR5BgOojV90_gpL4xJfDruA3nyJbnuj07kaXSIalmZRB375n347"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full relative select-none">
+<!-- Search & Filter Controls Header -->
+<div class="px-space-md pt-space-sm pb-space-xs flex flex-col gap-space-sm z-30">
+<!-- Search Bar -->
+<div class="relative flex items-center w-full shadow-sm rounded-xl bg-surface-container-lowest">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-9 rounded-xl bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="map-search" placeholder="Search teammate or desk (e.g. Maya, Pod 3B)..." type="text"/>
+<button aria-label="Clear Search" class="absolute right-2.5 w-6 h-6 flex items-center justify-center rounded-full text-outline hover:text-on-surface" id="clear-search">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Quick Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar -mx-space-md px-space-md">
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+        All Pods
+      </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+        Design &amp; UX
+      </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+        Frontend Devs
+      </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+        Growth Mktg
+      </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+        Available Desks (9)
+      </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px] text-outline">volume_off</span>
+        Quiet Zone
+      </button>
+</div>
+<!-- Floor Selector Switcher -->
+<div class="flex items-center justify-between gap-space-xs bg-surface-container-low p-1 rounded-full shadow-inner">
+<button class="flex-1 py-1.5 px-2 rounded-full text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">
+        Floor 2
+      </button>
+<button class="flex-[1.6] py-1.5 px-3 rounded-full bg-surface-container-lowest text-primary font-headline-sm text-[13px] font-bold shadow-sm flex items-center justify-center gap-1.5 transition-all">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+        Floor 3 (HQ)
+      </button>
+<button class="flex-1 py-1.5 px-2 rounded-full text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">
+        Floor 4
+      </button>
+</div>
+</div>
+<!-- Interactive Map Stage Container -->
+<div class="relative w-full overflow-hidden bg-surface-container-low px-space-md py-space-sm flex flex-col items-center justify-center" style="touch-action: pan-x pan-y pinch-zoom;">
+<!-- Live Floor Vitality Pill -->
+<div class="absolute top-4 left-6 z-20 flex items-center gap-2 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">nest_multi_room</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Floor 3 · West Wing</span>
+<span class="font-label-sm text-label-sm text-outline">|</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">42 checked-in</span>
+</div>
+<!-- Map Canvas (Architectural Floor Plan SVG Layout) -->
+<div class="relative w-full max-w-[420px] aspect-[4/5] bg-surface-container-lowest rounded-2xl shadow-md overflow-hidden transition-transform duration-300" id="map-viewport">
+<!-- Topographical / Blueprint Subtle Grid Background -->
+<svg class="absolute inset-0 w-full h-full opacity-40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="24" id="grid" patternunits="userSpaceOnUse" width="24">
+<path d="M 24 0 L 0 0 0 24" fill="none" stroke="#dae2fd" stroke-width="0.8"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Architectural SVG Layout Elements -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+<!-- Building Outline / Exterior Walls -->
+<rect height="476" rx="16" stroke="#c7c4d8" stroke-dasharray="6 4" stroke-width="2.5" width="376" x="12" y="12"></rect>
+<!-- Zone: Conference Rooms (Top Area) -->
+<!-- Apollo Room -->
+<rect fill="#eaedff" height="74" rx="8" stroke="#c7c4d8" stroke-width="1.2" width="105" x="24" y="24"></rect>
+<text fill="#131b2e" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" x="32" y="44">Apollo (6p)</text>
+<rect fill="#ba1a1a" fill-opacity="0.12" height="16" rx="8" width="48" x="32" y="52"></rect>
+<text fill="#ba1a1a" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" x="38" y="63">IN USE</text>
+<!-- Bonsai Room -->
+<rect fill="#eaedff" height="74" rx="8" stroke="#c7c4d8" stroke-width="1.2" width="130" x="135" y="24"></rect>
+<text fill="#131b2e" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" x="144" y="44">Bonsai Boardroom</text>
+<rect fill="#006e4b" fill-opacity="0.12" height="16" rx="8" width="46" x="144" y="52"></rect>
+<text fill="#006e4b" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" x="151" y="63">FREE</text>
+<!-- Phone Booths -->
+<rect fill="#dae2fd" height="35" rx="6" stroke="#c7c4d8" stroke-width="1" width="48" x="271" y="24"></rect>
+<text fill="#464555" font-family="Plus Jakarta Sans" font-size="9" font-weight="600" x="278" y="45">Booth 1</text>
+<rect fill="#eaedff" height="35" rx="6" stroke="#c7c4d8" stroke-width="1" width="48" x="325" y="24"></rect>
+<text fill="#006e4b" font-family="Plus Jakarta Sans" font-size="9" font-weight="600" x="332" y="45">Booth 2</text>
+<!-- Lounge & Zen Nook (Right Rail) -->
+<rect fill="#f2f3ff" height="100" rx="10" stroke="#c7c4d8" stroke-width="1" width="87" x="286" y="70"></rect>
+<text fill="#3525cd" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="296" y="90">Zen Lounge</text>
+<!-- Soft Lounge couches -->
+<rect fill="#dae2fd" height="24" rx="6" width="67" x="296" y="102"></rect>
+<rect fill="#dae2fd" height="24" rx="6" width="67" x="296" y="134"></rect>
+<!-- Central Kitchenette & Coffee Bar -->
+<rect fill="#eaedff" height="92" rx="12" stroke="#c7c4d8" stroke-width="1.2" width="140" x="24" y="380"></rect>
+<text fill="#131b2e" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" x="34" y="404">Espresso Bar</text>
+<!-- Kitchen Island counter -->
+<rect fill="#dae2fd" height="42" rx="6" width="120" x="34" y="416"></rect>
+<circle cx="56" cy="437" fill="#c3c0ff" r="8"></circle>
+<circle cx="94" cy="437" fill="#c3c0ff" r="8"></circle>
+<circle cx="132" cy="437" fill="#c3c0ff" r="8"></circle>
+<!-- Pod Zone A: Design & UX (Left/Center Top) -->
+<rect fill="#f2f3ff" height="105" rx="10" width="240" x="26" y="120"></rect>
+<text fill="#3525cd" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="36" y="138">POD A · DESIGN &amp; UX</text>
+<!-- Pod Desks Cluster -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="36" y="148"></rect>
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="104" y="148"></rect>
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="172" y="148"></rect>
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="36" y="184"></rect>
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="104" y="184"></rect>
+<rect fill="#ffffff" height="30" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="172" y="184"></rect>
+<!-- Pod Zone B: Frontend Engineering (Center Middle) -->
+<rect fill="#f2f3ff" height="110" rx="10" width="240" x="26" y="245"></rect>
+<text fill="#005338" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="36" y="263">POD B · FRONTEND ENG</text>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="36" y="273"></rect>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="104" y="273"></rect>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="172" y="273"></rect>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="36" y="311"></rect>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="104" y="311"></rect>
+<rect fill="#ffffff" height="32" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="62" x="172" y="311"></rect>
+<!-- Pod Zone C: Growth Marketing (Lower Right) -->
+<rect fill="#f2f3ff" height="92" rx="10" width="195" x="180" y="380"></rect>
+<text fill="#b90538" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="190" y="398">POD C · GROWTH &amp; MARKETING</text>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="190" y="410"></rect>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="248" y="410"></rect>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="306" y="410"></rect>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="190" y="440"></rect>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="248" y="440"></rect>
+<rect fill="#ffffff" height="26" rx="4" stroke="#c7c4d8" stroke-width="0.8" width="52" x="306" y="440"></rect>
+<!-- Walking Path Guidance Dash -->
+<path d="M 68 105 L 68 120 M 135 225 L 135 245 M 270 200 L 270 380" stroke="#c7c4d8" stroke-dasharray="3 3" stroke-width="1.5"></path>
+</svg>
+<!-- Dynamic Interactive Pins & Teammate Avatars Overlay -->
+<!-- Selected Teammate Desk: Maya Lin (Pod A - Desk 3B-14) -->
+<div class="absolute cursor-pointer transition-transform hover:scale-110 active:scale-95" data-teammate="maya" id="pin-maya" style="top: 36%; left: 33%; transform: translate(-50%, -50%);">
+<div class="relative flex items-center justify-center">
+<!-- Outer Pulsing Glow -->
+<div class="absolute -inset-2.5 rounded-full bg-primary-container opacity-35 animate-ping"></div>
+<div class="absolute -inset-1 rounded-full bg-primary shadow-lg opacity-40"></div>
+<!-- Avatar Frame with Status Indicator -->
+<div class="relative w-10 h-10 rounded-full bg-surface-container-lowest p-0.5 shadow-md ring-2 ring-primary">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close up photographic portrait of Maya Lin, an Asian woman in her late 20s with short chic bob hair, modern tortoiseshell glasses, warm radiant smile, wearing a cream textured knit sweater, bright natural morning office window light, soft lavender background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOr7TO4tQyLmxYJ3bKtjuWBi0qYJUjlgtpIA1AYc6j4siPlBoKMobncMZm55V7VGuou8HsoWXe-5LfqIoP8Uyn34lZjfm6wXFRfdmjfERcOP7G-dNTAUsEhYMElw1UmnlFcvlf9sRx6aBhi8anD3CUoOnQd1EaVCZj5wuke7i213tD7Sqe8riGAN2mAebwUswdc7wnYetxt-eHjQyH_n368adJ_Sq4ZymYhQ6X5Hm5"/>
+<!-- Status Dot (Green: At Desk) -->
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container border-2 border-surface-container-lowest"></span>
+</div>
+<!-- Desk ID Flag Tag -->
+<span class="absolute -bottom-4 px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[8px] font-bold shadow-sm whitespace-nowrap">
+            Desk 3B-14
+          </span>
+</div>
+</div>
+<!-- Teammate 2: Lucas Vance (Eng Pod B) -->
+<div class="absolute cursor-pointer transition-transform hover:scale-110 active:scale-95" data-teammate="lucas" style="top: 57%; left: 35%; transform: translate(-50%, -50%);">
+<div class="relative flex items-center justify-center">
+<div class="relative w-8 h-8 rounded-full bg-surface-container-lowest p-0.5 shadow-sm ring-1.5 ring-tertiary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait of Lucas Vance, a Caucasian male software engineer in his early 30s with trimmed beard and headphones resting around his neck, soft tech office atmosphere, warm cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeg15gDf0zaJKGt5CkT9NaiI0aHMCwSpnur7gCURDn773NDQ7-oTIorX4m7YR_u-KChH3NMi7aXPZ7W9u82h_ngrGoqLkHYeQWUEfJFV5rbCj4oP8TqRJYG9PiGBuaRUN94rgxsAjuKaqOnl-zV9cz_Z_8nxbgEzXPj7xt3gXM1qfSWeaSdi_tHm5xYI4odJb5j53oVKBZpK4jFcwfF91sPZbrAfyptmTvEU4VCURh"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container border border-surface-container-lowest"></span>
+</div>
+</div>
+</div>
+<!-- Teammate 3: Priya Patel (Eng Pod B - Focused) -->
+<div class="absolute cursor-pointer transition-transform hover:scale-110 active:scale-95" data-teammate="priya" style="top: 64%; left: 52%; transform: translate(-50%, -50%);">
+<div class="relative flex items-center justify-center">
+<div class="relative w-8 h-8 rounded-full bg-surface-container-lowest p-0.5 shadow-sm ring-1.5 ring-secondary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Headshot of Priya Patel, South Asian woman software developer with dark hair tied back in a neat bun, cheerful expression, wearing a stylish deep teal shirt, modern collaborative tech office ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfbC8MJp8OKKIJpP7DmAIoTwmVUalIMlPVGSnnwY12y9L5wCf6R17_ZHpLQ8ZL5pcJDSKf87xPXg06emH5TRFFuXb0tlCnxBh44wg1_p0qZ5t6fjhdJMHtrVA-MvC9vLsRY8g5lLkRK1ZxaM9E8gVXhhqTLST4ynty_TLykLtSHAIOYg8Vb3595LGJjRFG73SYxBxPzFk2bONJ04NHSIVcQq1c60EmLDV2ApSS4sBD"/>
+<!-- Amber ring: Focus Mode -->
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary-container border border-surface-container-lowest"></span>
+</div>
+</div>
+</div>
+<!-- Teammate 4: Samira (Growth - Pod C) -->
+<div class="absolute cursor-pointer transition-transform hover:scale-110 active:scale-95" data-teammate="samira" style="top: 86%; left: 63%; transform: translate(-50%, -50%);">
+<div class="relative flex items-center justify-center">
+<div class="relative w-8 h-8 rounded-full bg-surface-container-lowest p-0.5 shadow-sm ring-1.5 ring-tertiary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait photo of Samira, a North African woman marketing lead with curly hair, bright infectious smile, yellow blazer, sunlit modern plant-filled workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXALEbXCNBaNoV9Ni9e9VG76mLCdXHQgAFJShz2hDPiBuPPlT4XXG3NgcW76_fhoyXuiJXaSPXbYZ6eSgXrqJumow5Tt3Klky-LyVZeFi-vuXTQM3wMUCnUZosmz6rGXOTWCu7bIJwXup4PydU_6aGC9LgJxbZ0HxILb82Enst5b0Ky8B40BTU-hmW8V5MaUZ7hRIiBVPhdtAyvBMHuMVJ1bn9LjanzFo8Tl45KgO"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container border border-surface-container-lowest"></span>
+</div>
+</div>
+</div>
+<!-- Teammate 5: David (In Zen Lounge / Remote Sync) -->
+<div class="absolute cursor-pointer transition-transform hover:scale-110 active:scale-95" data-teammate="david" style="top: 25%; left: 82%; transform: translate(-50%, -50%);">
+<div class="relative flex items-center justify-center">
+<div class="relative w-8 h-8 rounded-full bg-surface-container-lowest p-0.5 shadow-sm ring-1.5 ring-primary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Friendly candid photo of David, an East Asian man product manager sitting casually in an office lounge couch with a notebook, navy crewneck sweater, cozy diffused window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCvFOWhA-xSJ-waPiSrWatkl1XyNIBO44TtxM73_s_4-wLtZvd6QhpaAu3yp-UfJMIvy2-laRi7n6DGQsi7kR1LixtahY4QbOskDp8_xQaAkySsSkeesFypki62XUsdWti5zoCEnUeGzouTlfPDyGPEh3qK62_Mh_14vx2gHsfNGKs6Mda7sTmHRfo-vGRHcU6P5j5irv2potaf-ZcgS-_JglOqY5CNnR-6XJibD0j"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-container border border-surface-container-lowest"></span>
+</div>
+</div>
+</div>
+<!-- Interactive Amenity Pin: Coffee Bar -->
+<div class="absolute flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm cursor-pointer hover:bg-surface-container" style="top: 86%; left: 24%; transform: translate(-50%, -50%);">
+<span class="material-symbols-outlined text-secondary text-[16px]">local_cafe</span>
+<span class="font-label-sm text-[10px] text-on-surface font-bold">Barista In</span>
+</div>
+<!-- Interactive Amenity Pin: Bonsai Boardroom Free Status -->
+<div class="absolute flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm cursor-pointer hover:bg-surface-container" style="top: 8%; left: 52%; transform: translate(-50%, -50%);">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Bonsai · Open</span>
+</div>
+<!-- Available Empty Hot Desk Pin -->
+<div class="absolute cursor-pointer flex items-center justify-center w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm hover:scale-110 transition-transform" style="top: 36%; left: 51%; transform: translate(-50%, -50%);" title="Available Hot Desk 3A-08">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</div>
+</div>
+<!-- Map Floating Controls Toolbars -->
+<!-- Zoom & Recenter Stack (Right Side) -->
+<div class="absolute right-7 bottom-6 flex flex-col gap-2 z-20">
+<button aria-label="Zoom in" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="btn-zoom-in">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<button aria-label="Zoom out" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="btn-zoom-out">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<button aria-label="Center on my desk" class="w-10 h-10 rounded-full bg-primary text-on-primary shadow-md flex items-center justify-center active:scale-95 transition-transform" id="btn-recenter">
+<span class="material-symbols-outlined text-[20px]">my_location</span>
+</button>
+</div>
+<!-- Legend Quick Drawer Button (Left Side) -->
+<div class="absolute left-7 bottom-6 z-20">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all active:scale-95" id="btn-toggle-legend">
+<span class="material-symbols-outlined text-[18px] text-primary">layers</span>
+<span>Legend</span>
+</button>
+</div>
+<!-- Expandable Map Legend Flyout -->
+<div class="hidden absolute left-6 bottom-18 z-30 p-space-sm bg-surface-container-lowest/95 backdrop-blur-md rounded-xl shadow-lg flex flex-col gap-2 min-w-[170px]" id="map-legend-card">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Map Status Key</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span>At Desk (Active)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>In Meeting / Focus</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Zen Lounge / Break</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Bookable Hot Desk</span>
+</div>
+</div>
+</div>
+<!-- Teammate Quick-Peek Floating Drawer / Bottom Sheet -->
+<div class="px-space-md pt-space-xs pb-space-md z-40">
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-md flex flex-col gap-space-sm">
+<!-- Drawer Grab Handle -->
+<div class="w-10 h-1 rounded-full bg-surface-container-high mx-auto -mt-1"></div>
+<!-- Main Profile Header Block -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<!-- Avatar Frame -->
+<div class="relative w-14 h-14 rounded-full p-0.5 bg-surface-container-lowest ring-2 ring-primary shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="High resolution studio photographic portrait of Maya Lin, Senior UX Designer, friendly confident demeanor with stylish round glasses and cream warm sweater, brightly lit modern minimalist office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt0JUbzpIbXnnxThSq6VE7CH8tRLRnu9y52D3S_jH3zHUsJPB7YsD3g9oWDtoMPHIsnG1Vsh81wODRoQy0rvL5OWVWLIYCGH87M8WjZ75MvFfFpmnBOkQzMR7GM80bX95Pl09AWK5i3_LN5hLkCwmwGDh_9jcKbYnPJTB_H8ftVHENEJPsDc8bfdYJHzCm1dL29Pb3R3wsYmrUIKmUlezKWNMCzS-06hXEKRCeFIJy"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary-container border-2 border-surface-container-lowest"></span>
+</div>
+<!-- Name & Core Info -->
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Maya Lin</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Senior Product Designer · Design Systems</span>
+<!-- Live Desk Badge -->
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-primary">pin_drop</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Desk 3B-14 · Floor 3</span>
+<span class="font-body-sm text-body-sm text-outline">· Near Bonsai Room</span>
+</div>
+</div>
+</div>
+<!-- Micro-Kudos Quick Tap Button -->
+<button aria-label="Send Quick Kudos" class="flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-secondary transition-all active:scale-90" id="quick-kudos-btn">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-[10px] font-bold mt-0.5" id="kudos-count">148</span>
+</button>
+</div>
+<!-- Status Bar Pill -->
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">At Desk · Deep Flow until 2:30 PM</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Design Review Next</span>
+</div>
+<!-- Dream AI Persona Vignette -->
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-primary-fixed text-on-primary-fixed">
+<span class="text-xl">🧑‍🚀</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-fixed-variant font-extrabold">Huddle Dream Persona</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-label-sm text-[9px] font-bold shadow-xs">AI</span>
+</div>
+<span class="font-label-md text-label-md text-on-primary-fixed truncate">Deep Space Astrobiologist &amp; Nebula Cartographer</span>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="grid grid-cols-3 gap-space-sm pt-1">
+<!-- Direct Say Hi / Ping -->
+<button class="flex items-center justify-center gap-1.5 h-11 px-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all active:scale-95" id="btn-say-hi">
+<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble</span>
+<span>Say Hi</span>
+</button>
+<!-- Navigate Route to Desk -->
+<button class="flex items-center justify-center gap-1.5 h-11 px-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all active:scale-95" id="btn-navigate">
+<span class="material-symbols-outlined text-[18px] text-tertiary">near_me</span>
+<span>Directions</span>
+</button>
+<!-- View Full Profile Button -->
+<button class="flex items-center justify-center gap-1.5 h-11 px-2 rounded-xl bg-primary text-on-primary hover:opacity-95 font-label-md text-label-md transition-all active:scale-95 shadow-sm">
+<span>Profile</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Client-Side Delights -->
+<script>
+    (function initFloorMap() {
+      // Kudos Micro-delight bounce & counter
+      const kudosBtn = document.getElementById('quick-kudos-btn');
+      const kudosCount = document.getElementById('kudos-count');
+      if (kudosBtn && kudosCount) {
+        kudosBtn.addEventListener('click', () => {
+          let current = parseInt(kudosCount.textContent, 10);
+          kudosCount.textContent = current + 1;
+          kudosBtn.classList.add('scale-125', 'bg-secondary-fixed');
+          setTimeout(() => {
+            kudosBtn.classList.remove('scale-125', 'bg-secondary-fixed');
+          }, 250);
+        });
+      }
+
+      // Legend Toggle
+      const legendBtn = document.getElementById('btn-toggle-legend');
+      const legendCard = document.getElementById('map-legend-card');
+      if (legendBtn && legendCard) {
+        legendBtn.addEventListener('click', () => {
+          legendCard.classList.toggle('hidden');
+        });
+      }
+
+      // Zoom Controls Interaction
+      const viewport = document.getElementById('map-viewport');
+      let scale = 1;
+      const zoomInBtn = document.getElementById('btn-zoom-in');
+      const zoomOutBtn = document.getElementById('btn-zoom-out');
+      const recenterBtn = document.getElementById('btn-recenter');
+
+      if (viewport && zoomInBtn && zoomOutBtn && recenterBtn) {
+        zoomInBtn.addEventListener('click', () => {
+          scale = Math.min(scale + 0.15, 1.45);
+          viewport.style.transform = `scale(${scale})`;
+        });
+
+        zoomOutBtn.addEventListener('click', () => {
+          scale = Math.max(scale - 0.15, 0.9);
+          viewport.style.transform = `scale(${scale})`;
+        });
+
+        recenterBtn.addEventListener('click', () => {
+          scale = 1;
+          viewport.style.transform = 'scale(1)';
+          const mayaPin = document.getElementById('pin-maya');
+          if (mayaPin) {
+            mayaPin.classList.add('scale-125');
+            setTimeout(() => mayaPin.classList.remove('scale-125'), 300);
+          }
+        });
+      }
+
+      // Quick Say Hi Feedback
+      const sayHiBtn = document.getElementById('btn-say-hi');
+      if (sayHiBtn) {
+        sayHiBtn.addEventListener('click', () => {
+          sayHiBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">check</span><span>Pinged!</span>';
+          setTimeout(() => {
+            sayHiBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble</span><span>Say Hi</span>';
+          }, 2000);
+        });
+      }
+
+      // Search Clear Button
+      const searchInput = document.getElementById('map-search');
+      const clearSearch = document.getElementById('clear-search');
+      if (searchInput && clearSearch) {
+        clearSearch.addEventListener('click', () => {
+          searchInput.value = '';
+          searchInput.focus();
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="office-map" href="#"><span class="material-symbols-outlined text-[24px]">map</span><span class="font-label-sm text-label-sm">Map</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="company-feed" href="#"><span class="material-symbols-outlined text-[24px]">forum</span><span class="font-label-sm text-label-sm">Feed</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="dream-ai" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[8px] leading-tight shadow-sm">AI</span></div><span class="font-label-sm text-label-sm">Dream AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

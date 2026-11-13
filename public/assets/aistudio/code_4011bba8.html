@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#eaedff", "surface-container-high": "#e2e7ff", "outline": "#777587", "secondary-fixed-dim": "#ffb2b7", "secondary": "#b90538", "primary": "#3525cd", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface": "#faf8ff", "on-primary-fixed": "#0f0069", "secondary-container": "#dc2c4f", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "tertiary": "#005338", "on-secondary-container": "#fffbff", "on-secondary-fixed": "#40000d", "secondary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3323cc", "inverse-on-surface": "#eef0ff", "outline-variant": "#c7c4d8", "on-surface-variant": "#464555", "on-background": "#131b2e", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "primary-fixed": "#e2dfff", "tertiary-container": "#006e4b", "tertiary-fixed": "#6ffbbe", "surface-tint": "#4d44e3", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "on-tertiary-container": "#67f4b7", "surface-container-highest": "#dae2fd", "error": "#ba1a1a", "surface-variant": "#dae2fd", "background": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "primary-container": "#4f46e5", "primary-fixed-dim": "#c3c0ff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "on-secondary-fixed-variant": "#92002a", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Huddle App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MGCN6v3pyV3MQc4tavWdLO1IY_qaRo2yql7H5Yz9PMK41FhSv9HdDQsbhEFF_AiKja3sUIYRmFnfzP91BkmLQoNDTPbdTaRctyhGzxIMTpogHbkkgktZ68hEVsiplHIj11ylD4Bra_rJnFrUjdcJ8HYg_5gkOdzDd9DNvezV75zGVA-x7ER3U4pFkA8k8n26uJX86-vZSA_P9PqsDZYGsuGwuP57PedmvcR98UUR"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Huddle</span><span class="font-label-sm text-label-sm text-on-surface-variant">Dream Ai</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Floor 3 · 42 Teammates In</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxLIkHxNSDl8eQ_KePkA71YXAW0TEQjTEL3ZTto4bFO15VQt3gwsIRVgkVtQiY0wHcyGM-1cVu9niH3gqytHNXLjkkIVZi-47v5yZDTyG3J-SzSXzofuuKVxIELfH5g_Ufg2-geU2TxpeBATVlcTLI5abHA_yR_P7Cyu8Q5PDp5yEGB2T4u7x4rR5BgOojV90_gpL4xJfDruA3nyJbnuj07kaXSIalmZRB375n347"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 space-y-space-lg px-space-md">
+<!-- Studio Header & Generator Hero Card -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container via-primary to-surface-tint p-space-md text-on-primary shadow-md">
+<div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-full bg-tertiary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-6 -top-6 w-28 h-28 rounded-full bg-secondary-fixed/20 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-on-primary/15 backdrop-blur-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-tertiary-fixed">AI Persona Studio</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/20 font-label-sm text-label-sm text-on-primary">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Daily: 3/3 left
+        </span>
+</div>
+<div class="pt-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-primary tracking-tight">
+          What’s your alternate career universe?
+        </h1>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">
+          Transform your corporate desk identity into your wild, cosmic, or culinary dream job with one tap.
+        </p>
+</div>
+<!-- Quick category pill bar -->
+<div class="pt-2">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-primary/80 mb-2">Pick an inspiration vibe</label>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar text-on-surface">
+<button class="category-chip flex-shrink-0 px-3 py-1.5 rounded-full bg-surface text-primary font-label-md text-label-md shadow-sm transition-transform active:scale-95 flex items-center gap-1.5" data-theme="Space Botanist planting hydroponic orchids inside a glass dome on Mars, futuristic bio-suit" type="button">
+<span>🚀 Sci-Fi &amp; Space</span>
+</button>
+<button class="category-chip flex-shrink-0 px-3 py-1.5 rounded-full bg-on-primary/15 text-on-primary font-label-md text-label-md hover:bg-on-primary/25 transition-transform active:scale-95 flex items-center gap-1.5" data-theme="Michelin Star Ramen Chef in a bustling rainy Shinjuku alley, handcrafted bamboo noodles, warm neon steam" type="button">
+<span>🍜 Culinary Arts</span>
+</button>
+<button class="category-chip flex-shrink-0 px-3 py-1.5 rounded-full bg-on-primary/15 text-on-primary font-label-md text-label-md hover:bg-on-primary/25 transition-transform active:scale-95 flex items-center gap-1.5" data-theme="Big Wave Surfer tackling an 80-foot turquoise swell in Nazare, rugged wetsuit, golden hour spray" type="button">
+<span>🏄 Extreme Sports</span>
+</button>
+<button class="category-chip flex-shrink-0 px-3 py-1.5 rounded-full bg-on-primary/15 text-on-primary font-label-md text-label-md hover:bg-on-primary/25 transition-transform active:scale-95 flex items-center gap-1.5" data-theme="Electric Cello Virtuoso performing at an illuminated forest cathedral concert under bioluminescent trees" type="button">
+<span>🎸 Creative &amp; Music</span>
+</button>
+<button class="category-chip flex-shrink-0 px-3 py-1.5 rounded-full bg-on-primary/15 text-on-primary font-label-md text-label-md hover:bg-on-primary/25 transition-transform active:scale-95 flex items-center gap-1.5" data-theme="Grizzly Bear Wildlife Biologist trekking subzero Alaskan tundra pines with snowy telemetry pack" type="button">
+<span>🐻 Wildlife &amp; Nature</span>
+</button>
+</div>
+</div>
+<!-- Dream Prompt input -->
+<div class="pt-2 flex flex-col space-y-1.5">
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-0 shadow-inner" id="prompt-input" placeholder="e.g., Michelin Star Ramen Chef in Tokyo or F1 Pit Mechanic..." type="text" value="Commander Botanist cultivating neon glowing hydroponics on a Martian base"/>
+<button aria-label="Clear input" class="absolute right-2.5 w-7 h-7 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" id="clear-prompt" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Art Style selector -->
+<div class="pt-1 flex flex-col space-y-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary/80">Aesthetic Lens</span>
+<div class="grid grid-cols-2 gap-2 text-on-surface">
+<button class="style-selector active px-2.5 py-2 rounded-lg bg-surface text-primary font-label-md text-label-md flex items-center justify-between shadow-sm" type="button">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">movie</span> Cinematic Realism</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+</button>
+<button class="style-selector px-2.5 py-2 rounded-lg bg-on-primary/15 text-on-primary font-label-md text-label-md flex items-center justify-between hover:bg-on-primary/25" type="button">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">animation</span> 3D Pixar Warm</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check_circle</span>
+</button>
+<button class="style-selector px-2.5 py-2 rounded-lg bg-on-primary/15 text-on-primary font-label-md text-label-md flex items-center justify-between hover:bg-on-primary/25" type="button">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">auto_stories</span> Comic Hero Pulp</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check_circle</span>
+</button>
+<button class="style-selector px-2.5 py-2 rounded-lg bg-on-primary/15 text-on-primary font-label-md text-label-md flex items-center justify-between hover:bg-on-primary/25" type="button">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">camera_roll</span> 70s Polaroid Grain</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Prominent Magic CTA Button -->
+<button class="w-full mt-2 h-12 rounded-lg bg-gradient-to-r from-secondary-container via-secondary to-secondary-container text-on-secondary font-headline-sm text-headline-sm shadow-lg flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] transition-all" id="generate-btn" type="button">
+<span class="material-symbols-outlined text-[22px] animate-spin-slow">auto_awesome</span>
+<span>Generate Dream Persona</span>
+</button>
+</div>
+</div>
+<!-- Interactive Generated Preview Card -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Your Alter Ego Preview</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Draft · Unsaved</span>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md flex flex-col">
+<!-- Top Toggle Pill: Real Me vs Dream Alter Ego -->
+<div class="p-space-md pb-space-sm flex items-center justify-center">
+<div class="inline-flex p-1 rounded-full bg-surface-container text-on-surface-variant w-full max-w-xs shadow-inner">
+<button class="flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface-variant transition-all flex items-center justify-center gap-1" id="toggle-real" type="button">
+<span class="material-symbols-outlined text-[16px]">business_center</span>
+<span>Real Me (Desk)</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all flex items-center justify-center gap-1" id="toggle-dream" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">rocket_launch</span>
+<span class="font-bold">Dream Persona</span>
+</button>
+</div>
+</div>
+<!-- Visual Card Area with Holographic shimmer vibe -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<!-- Dream Portrait (Visible by default) -->
+<div class="absolute inset-0 transition-opacity duration-300 opacity-100 flex flex-col justify-end" id="portrait-dream">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic ultra-realistic portrait of a vibrant woman in an astronaut explorer flight suit with glowing bioluminescent badges inside a futuristic Martian greenhouse dome. Warm cosmic lighting with purple and electric coral reflections, lush alien plants, highly detailed high tech space gear, cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO978w9U8j71hj8wu2ykD61xxJWJ4_cPpbGs99hsRgsAPT2Qc78I4R6yIDoKL5agvfMsN23RzPcYhkp90C4-9pKQIwEMoMdeyFpeX9KjQq9N2RdtFBE7RvadidHGYUXdyfPbgYUVDEgYCL2JzSTUyicBYZatP86zwPvZ6k29vC2ENxOw4LfcCrdonmar44VWd-yCPhN1p4EsnQPs4ht2CCB6p2po_w_8fvOWnXRSoS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/40 to-transparent"></div>
+<!-- Sparkle particle overlay -->
+<div class="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface/20 backdrop-blur-md text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed">arrow_back_ios_new</span>
+<span>AI Gen v4.2</span>
+</div>
+<div class="relative z-10 p-space-md flex flex-col text-on-primary">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-sm text-label-sm tracking-wide uppercase">Sci-Fi Pioneer</span>
+<span class="font-label-sm text-label-sm text-surface-container-highest">Floor 3 Hybrid</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-primary mt-1">
+              Commander Maya
+            </h3>
+<p class="font-label-lg text-label-lg text-tertiary-fixed font-semibold">
+              First Botanist on Mars Colony · Bio-Dome 01
+            </p>
+</div>
+</div>
+<!-- Real Corporate Me Portrait (Hidden toggle state) -->
+<div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none flex flex-col justify-end" id="portrait-real">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Friendly candid modern corporate photo of Maya wearing a navy blue minimalist sweater and glasses, sitting at a clean Scandinavian wooden office desk with potted ficus plants, dual monitors with UI wireframes, warm morning sun streaming through modern floor-to-ceiling windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR_UrEXV01T4WMEnger9JcfsEi_nRNsNZFMaj0DVs87J_7aaqjyKrsR2rDFBnFHX9tQR6dVFldQkbhr00CmV1gyJIDyK8LZEGg1JXi4OlwYDO4MVlHEjcxuTsP0ioj4TM0NJm0Ry3lKD9Vkz-WxWMf4bTO1b-93tsSmh5l8tUBgHCaLCFOtJOVgUve_EL4qt1CMqINYOcB6x_CDkvDVn0ULNOnTwRn7OCeZ3svP3Z6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/40 to-transparent"></div>
+<div class="relative z-10 p-space-md flex flex-col text-on-primary">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm tracking-wide uppercase">Current Reality</span>
+<span class="font-label-sm text-label-sm text-surface-container-highest">Desk #342</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-primary mt-1">
+              Maya Lin
+            </h3>
+<p class="font-label-lg text-label-lg text-primary-fixed-dim font-semibold">
+              Lead Product Designer · Design Systems
+            </p>
+</div>
+</div>
+</div>
+<!-- Persona Story & Office Parallel Callout -->
+<div class="p-space-md flex flex-col space-y-space-sm bg-surface-container-lowest">
+<div class="rounded-lg bg-surface-container-low p-3 flex flex-col space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">psychology_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Why This Universe</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                Obsessed with cultivating oxygen-rich Martian orchids under harsh radiation filters. Secret passion for extreme botany and space habitats.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">nest_eco_leaf</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Office Parallel</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Solely responsible for keeping the 3rd floor ficus plant and desk succulents alive through Q4 sprints.
+              </p>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary/95 active:scale-95 transition-all shadow-sm" id="publish-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publish to Feed &amp; Badge</span>
+</button>
+<button aria-label="Regenerate" class="w-11 h-11 rounded bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-all" id="regen-preview-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+<button aria-label="Download Badge" class="w-11 h-11 rounded bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-all" id="download-badge-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Leaderboard & Community Showcase -->
+<div class="flex flex-col space-y-space-md pt-2">
+<div class="flex items-end justify-between px-1">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Trending Alter Egos</span>
+<span class="text-[18px]">🔥</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top voted alternate careers on Floor 3 this week</p>
+</div>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center" type="button">
+<span>View 42</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Community Persona Cards Stack -->
+<div class="flex flex-col space-y-space-md">
+<!-- Colleague 1: Liam -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of Liam smiling in a gray hoodie with headphones resting around his neck, bright tech startup background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVFdgUJkdPrdF5ZTk3v7sku7voruO0kdZtVyPzfCMcRrs0BdTs4c7l3lI4ai-hJGHFuIek3A7unbb0jsPiO_72qQgF5h9nCgpEftPyxXTeq8kRoSBnDVrCDJq26aA48i4KmwcyGlt3DgE5B1l72LwTsNw1ovvguA-DyUPmfaIxYnQYiWxSPoq5BM0n2Ek_9722ekpVLkM9BhdllNoi0F5oto7LN7BQXXE4OewuxUTC"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Liam Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DevOps Engineer · Floor 3 Pod B</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+            #1 Trending
+          </span>
+</div>
+<!-- Colleague Persona Image Banner -->
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Epic cinematic photography of Liam as an Alaskan Grizzly Bear Whisperer in a snow-covered pine valley, wearing thick brown shearling parka, softly high-fiving a majestic massive grizzly bear in gentle falling snowflakes, golden cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVVaAHy3uisZHKGl0RuTAQvyo2LfrUW6DiJ9DnOoLL9-MJaJ5X-djVyfdIuW5BFU6Plji-O-Y09m_6fFVbqlTg_wf-0F1WwP4eCzaVdNDqJms0yX7jWnA020GaY2-YPiG8N9jt3CtML-K3hn3Bppj_cN-15APLrZSoiBoRzOoZcVLJB9UmM_bdi5qTWlxV94NWubpmyCledy6gHmQ0e8neLzCigfXYKYcammMSw9-c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-end justify-between text-on-primary">
+<div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm uppercase">Dream Job</span>
+<h4 class="font-title-md text-title-md font-bold mt-0.5">Grizzly Wrangler in Deep Alaska</h4>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-highest">"Cloud deployments are similar"</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<button class="kudos-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-md text-label-md hover:bg-surface-container transition-all active:scale-90" data-count="48" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="count font-bold">48 votes</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>14</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Colleague 2: Priya -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of Priya with warm laugh, vibrant mustard blazer, modern office hallway in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ffsM9F4OYR3HLnrr1Y65mrjQJ-Ygr2WMQNaxN93YOnb3hre3wt5jOTjplGmMF-eagH68YVrXlHTIUyOzveXjiBz1XXed8OoyZ8fkiMJFIH4RJa9qDcDmUO9-6DWu8ipGGbqzZSnNnqGAQO_WtjOw1rpEbPF1zFOIWI1nXRtLgjxCl_DVFuHc54tYmFiekzhgGKP1GqF8WNPQT3PUIffTe6vG0Nt_YlaW6qp_gX1k"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Priya Nair</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Product Manager · Growth</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold">
+            #2 Trending
+          </span>
+</div>
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Vibrant dynamic photograph of Priya as a Broadway Lead Choreographer on an illuminated grand wooden theater stage in New York, dramatic theatrical stage spotlights, troupe of synchronized dancers in motion blur around her." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh8wE58_dD7awKFUJgFu_xeHGcIFemiKMFFhHEmV9Lqx5kudtacdemNTLgbTx--Axk1AiB2RYfTEGcex4BvFtP88tJWdHrTpUTRvXPBWUBpf3uFAT7rsCBP_po6oZ0HNZDeRjf6sYuf7Bpqewtg5Vjl1Nawq5j3rJxXh6xs5Vuf7ruCu62Z5JCcy9VYExO-7j6gZpqLsc8Pvq-fsBugfMZ0jyeDrsvZfYq7HAXNa3b"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-end justify-between text-on-primary">
+<div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase">Dream Job</span>
+<h4 class="font-title-md text-title-md font-bold mt-0.5">Broadway Theater Choreographer</h4>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-highest">"Managing roadmaps is pure rhythm"</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<button class="kudos-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-md text-label-md hover:bg-surface-container transition-all active:scale-90" data-count="62" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="count font-bold">62 votes</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>23</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Colleague 3: Carlos -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Friendly candid portrait photo of Carlos in glasses and charcoal cardigan at a laptop in a bright team lounge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKPMgFmx0smPDnDeU2ohgwv0rfyfMmSj19JWlRXJ_ikobgbzxHIXvFEORPwAvkKRot5NqYpNofpipG1-9kW4hNWoAgoQrQApJ18s60QVHJPZCAPsQFjByDWOMNgCG4lSek4Qd34C29gqOWWtd8VL0M64XIScPxtC41dd63cO7k5F2uNIVMdvbFk3ak2beVNEg3MkLlI3zrH9DCguViUE0jQFC8QOueNOAx8jYaVcgh"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary-container"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Carlos Mendes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior Financial Analyst · Floor 2</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-semibold">
+            #3 Trending
+          </span>
+</div>
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Undersea underwater photograph of Carlos as a deep sea marine archaeologist uncovering ancient sunken Roman galleon gold coins on coral reef floor, wearing high-tech sleek dive helmet, glowing dive lights cutting through turquoise Caribbean waters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDybx6a2T6iGlqilL-454iy-6OFeZF3GKvuHcJV5ohnPGMBqi9vBDPRexXASDSf9-ZALcv3AWuRb1p69faWHwTpTGxVchbIMNKWOoSunpU_QTlRWFIKPEjKZutIZ5jsJGLC0vCGAlnBDocLywCc4chR6RC_B89PkT2FJ-0vFkYMjrOk0kLIWEphhLB0WHFk3Oh7FACPHalncatu00FuizxEGax7Msi0QOX9l4e0jVv-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-end justify-between text-on-primary">
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm uppercase">Dream Job</span>
+<h4 class="font-title-md text-title-md font-bold mt-0.5">Deep Sea Shipwreck Salvager</h4>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-highest">"Looking for hidden balance sheets"</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<button class="kudos-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-md text-label-md hover:bg-surface-container transition-all active:scale-90" data-count="39" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="count font-bold">39 votes</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>8</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Challenge Teaser Banner -->
+<div class="rounded-xl bg-gradient-to-r from-surface-container-high to-surface-container p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">trophy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Friday Alter Ego Reveal Party</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Top 3 vote getters win custom 3D desk figurines!</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</div>
+</div>
+<script>
+  (function initDreamStudio() {
+    // 1. Real vs Dream Toggle
+    const toggleReal = document.getElementById('toggle-real');
+    const toggleDream = document.getElementById('toggle-dream');
+    const portraitDream = document.getElementById('portrait-dream');
+    const portraitReal = document.getElementById('portrait-real');
+
+    if (toggleReal && toggleDream && portraitDream && portraitReal) {
+      toggleReal.addEventListener('click', () => {
+        toggleReal.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        toggleReal.classList.remove('text-on-surface-variant');
+        toggleDream.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        toggleDream.classList.add('text-on-surface-variant');
+
+        portraitDream.classList.remove('opacity-100');
+        portraitDream.classList.add('opacity-0', 'pointer-events-none');
+        portraitReal.classList.remove('opacity-0', 'pointer-events-none');
+        portraitReal.classList.add('opacity-100');
+      });
+
+      toggleDream.addEventListener('click', () => {
+        toggleDream.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        toggleDream.classList.remove('text-on-surface-variant');
+        toggleReal.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        toggleReal.classList.add('text-on-surface-variant');
+
+        portraitReal.classList.remove('opacity-100');
+        portraitReal.classList.add('opacity-0', 'pointer-events-none');
+        portraitDream.classList.remove('opacity-0', 'pointer-events-none');
+        portraitDream.classList.add('opacity-100');
+      });
+    }
+
+    // 2. Category Chips -> Fill Prompt
+    const chips = document.querySelectorAll('.category-chip');
+    const promptInput = document.getElementById('prompt-input');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('bg-surface', 'text-primary');
+          c.classList.add('bg-on-primary/15', 'text-on-primary');
+        });
+        chip.classList.add('bg-surface', 'text-primary');
+        chip.classList.remove('bg-on-primary/15', 'text-on-primary');
+
+        const theme = chip.getAttribute('data-theme');
+        if (theme && promptInput) {
+          promptInput.value = theme;
+          promptInput.focus();
+        }
+      });
+    });
+
+    // 3. Clear prompt input
+    const clearBtn = document.getElementById('clear-prompt');
+    if (clearBtn && promptInput) {
+      clearBtn.addEventListener('click', () => {
+        promptInput.value = '';
+        promptInput.focus();
+      });
+    }
+
+    // 4. Style selector toggle
+    const styleSelectors = document.querySelectorAll('.style-selector');
+    styleSelectors.forEach(btn => {
+      btn.addEventListener('click', () => {
+        styleSelectors.forEach(s => {
+          s.classList.remove('bg-surface', 'text-primary');
+          s.classList.add('bg-on-primary/15', 'text-on-primary');
+          const icon = s.querySelector('.material-symbols-outlined:last-child');
+          if (icon) icon.classList.add('opacity-0');
+        });
+        btn.classList.add('bg-surface', 'text-primary');
+        btn.classList.remove('bg-on-primary/15', 'text-on-primary');
+        const activeIcon = btn.querySelector('.material-symbols-outlined:last-child');
+        if (activeIcon) activeIcon.classList.remove('opacity-0');
+      });
+    });
+
+    // 5. Generate Button micro-animation
+    const generateBtn = document.getElementById('generate-btn');
+    if (generateBtn) {
+      generateBtn.addEventListener('click', () => {
+        const originalText = generateBtn.innerHTML;
+        generateBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+          <span>Synthesizing Multiverse...</span>
+        `;
+        generateBtn.classList.add('opacity-80', 'pointer-events-none');
+
+        setTimeout(() => {
+          generateBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px]">check</span>
+            <span>Persona Born!</span>
+          `;
+          setTimeout(() => {
+            generateBtn.innerHTML = originalText;
+            generateBtn.classList.remove('opacity-80', 'pointer-events-none');
+            // ensure dream tab is active
+            if (toggleDream) toggleDream.click();
+          }, 1000);
+        }, 1200);
+      });
+    }
+
+    // 6. Kudos Reaction increments
+    const kudosButtons = document.querySelectorAll('.kudos-btn');
+    kudosButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        let count = parseInt(btn.getAttribute('data-count') || '0', 10);
+        const countSpan = btn.querySelector('.count');
+        const isLiked = btn.classList.contains('bg-secondary-fixed');
+
+        if (!isLiked) {
+          count += 1;
+          btn.classList.remove('bg-surface-container-low', 'text-secondary');
+          btn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+          btn.style.transform = 'scale(1.15)';
+          setTimeout(() => { btn.style.transform = 'scale(1)'; }, 150);
+        } else {
+          count -= 1;
+          btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+          btn.classList.add('bg-surface-container-low', 'text-secondary');
+        }
+        btn.setAttribute('data-count', count.toString());
+        if (countSpan) countSpan.textContent = `${count} votes`;
+      });
+    });
+
+    // 7. Publish Toast Feedback
+    const publishBtn = document.getElementById('publish-btn');
+    if (publishBtn) {
+      publishBtn.addEventListener('click', () => {
+        const original = publishBtn.innerHTML;
+        publishBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Published to Floor 3!</span>`;
+        publishBtn.classList.add('bg-tertiary');
+        setTimeout(() => {
+          publishBtn.innerHTML = original;
+          publishBtn.classList.remove('bg-tertiary');
+        }, 2000);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="office-map" href="#"><span class="material-symbols-outlined text-[24px]">map</span><span class="font-label-sm text-label-sm">Map</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="company-feed" href="#"><span class="material-symbols-outlined text-[24px]">forum</span><span class="font-label-sm text-label-sm">Feed</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="dream-ai" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[8px] leading-tight shadow-sm">AI</span></div><span class="font-label-sm text-label-sm">Dream AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

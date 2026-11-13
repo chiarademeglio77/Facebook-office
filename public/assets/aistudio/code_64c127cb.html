@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#eaedff", "surface-container-high": "#e2e7ff", "outline": "#777587", "secondary-fixed-dim": "#ffb2b7", "secondary": "#b90538", "primary": "#3525cd", "surface-dim": "#d2d9f4", "on-error-container": "#93000a", "surface": "#faf8ff", "on-primary-fixed": "#0f0069", "secondary-container": "#dc2c4f", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "tertiary": "#005338", "on-secondary-container": "#fffbff", "on-secondary-fixed": "#40000d", "secondary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3323cc", "inverse-on-surface": "#eef0ff", "outline-variant": "#c7c4d8", "on-surface-variant": "#464555", "on-background": "#131b2e", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "primary-fixed": "#e2dfff", "tertiary-container": "#006e4b", "tertiary-fixed": "#6ffbbe", "surface-tint": "#4d44e3", "on-surface": "#131b2e", "on-tertiary": "#ffffff", "inverse-surface": "#283044", "on-tertiary-container": "#67f4b7", "surface-container-highest": "#dae2fd", "error": "#ba1a1a", "surface-variant": "#dae2fd", "background": "#faf8ff", "tertiary-fixed-dim": "#4edea3", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "primary-container": "#4f46e5", "primary-fixed-dim": "#c3c0ff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "on-secondary-fixed-variant": "#92002a", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Huddle App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MGCN6v3pyV3MQc4tavWdLO1IY_qaRo2yql7H5Yz9PMK41FhSv9HdDQsbhEFF_AiKja3sUIYRmFnfzP91BkmLQoNDTPbdTaRctyhGzxIMTpogHbkkgktZ68hEVsiplHIj11ylD4Bra_rJnFrUjdcJ8HYg_5gkOdzDd9DNvezV75zGVA-x7ER3U4pFkA8k8n26uJX86-vZSA_P9PqsDZYGsuGwuP57PedmvcR98UUR"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Huddle</span><span class="font-label-sm text-label-sm text-on-surface-variant">My Profile</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Floor 3 · 42 Teammates In</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button aria-label="User Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxLIkHxNSDl8eQ_KePkA71YXAW0TEQjTEL3ZTto4bFO15VQt3gwsIRVgkVtQiY0wHcyGM-1cVu9niH3gqytHNXLjkkIVZi-47v5yZDTyG3J-SzSXzofuuKVxIELfH5g_Ufg2-geU2TxpeBATVlcTLI5abHA_yR_P7Cyu8Q5PDp5yEGB2T4u7x4rR5BgOojV90_gpL4xJfDruA3nyJbnuj07kaXSIalmZRB375n347"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-space-md py-space-md gap-space-lg">
+<!-- Interactive Dual Identity Card -->
+<section class="relative w-full rounded-2xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-md overflow-hidden">
+<!-- Top Persona Segmented Switch -->
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex p-1 rounded-full bg-surface-container-high w-full max-w-[280px]">
+<button class="flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1.5 transition-all" id="toggle-real-btn" onclick="setPersona('real')">
+<span>👔</span>
+<span>Real Identity</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-all" id="toggle-alter-btn" onclick="setPersona('alter')">
+<span>🚀</span>
+<span>Alter Ego</span>
+</button>
+</div>
+<!-- Quick Share Profile Pill -->
+<button aria-label="Share Maya's Profile" class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" onclick="triggerShareToast()">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+<!-- Dual Avatar & Core Bio Presentation -->
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-space-md pt-space-xs">
+<!-- Portrait Card with Presence Ring Indicator -->
+<div class="relative shrink-0 w-28 h-28 rounded-2xl overflow-hidden shadow-md">
+<!-- Real Portrait -->
+<img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Vibrant corporate portrait of Maya Lin, an energetic Asian woman in her late 20s smiling warmly wearing a stylish indigo-navy sweater against a soft, bright office background with indoor greenery and warm ambient natural light." id="avatar-real" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXZ1s-5ljHJqseHk-JeMZkvl_2iVzyo8Mqy0n_ui47Dr6wRZP1qUAZGrrkk26nDfYtmTivGEUwFaCL-laP1RM_H2zFnhEwkVtJMOeC8Fm1wT_-XqXmpiu3LrNZtH9buBd4W6Y1-nSKsh5OErmsN1fa-3JHbli6hVddX2SdYUSIpmINZMzo1Sej0wfi6qS8V22NdOWkVnjytLzhBHp8YtoVRm2ScCMGC6hjCO8uLlb9"/>
+<!-- Alter Ego Astronaut Portrait (Hidden Initially) -->
+<img class="w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-300" data-alt="Playful cinematic AI persona portrait of an Asian woman astronaut named Maya, wearing an iridescent retro-futuristic exploration spacesuit with embroidered botanical patches, glowing holographic helmet reflection, and colorful nebulae in deep cosmos background." id="avatar-alter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQctBUldppO0VHCHF3d1qVPxElZY2Y8lqk6rOSdpRbx8emfo21tzPQOtKgEouxwkB-_gl0vYXWribALgnrxMN2pMR_riHCDIMiOySd2Nr8_RRo2xzz8YdFXOtkF7mi3YxmzTT1RWov8_57azCtQBmocBfPWAlxj9SzbHurax1VvWctHAVq7-Pv2TgUMiqTWyCdc8b4bNw2rAJINQB6fD4VQ5iBNndavo1Ra0aiXKh"/>
+<!-- Presence Beacon Badge -->
+<div class="absolute bottom-1.5 right-1.5 px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" id="presence-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span>In Office</span>
+</div>
+</div>
+<!-- Member Details (Dynamic on toggle) -->
+<div class="flex flex-col text-center sm:text-left min-w-0 flex-1">
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mb-1">
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Maya Lin</h1>
+<span class="material-symbols-outlined text-primary text-[18px]" title="Verified Colleague">verified</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" id="role-tag">UX Core</span>
+</div>
+<p class="font-title-md text-title-md text-primary font-semibold" id="profile-title">Senior Product Designer</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="profile-subtitle">Focusing on design tokens, mobile fluidity, and frictionless user rituals.</p>
+<!-- Pronouns & Timezone -->
+<div class="flex items-center justify-center sm:justify-start gap-3 mt-2 text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+            she/her
+          </span>
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+            9:00 AM – 5:30 PM PST
+          </span>
+</div>
+</div>
+</div>
+<!-- Quick Micro-Actions Row -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<button class="h-11 px-space-sm rounded-xl bg-primary text-on-primary hover:opacity-95 active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerQuickAction('Slack message opened with Maya!')">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="font-label-md text-label-md truncate">Chat</span>
+</button>
+<button class="h-11 px-space-sm rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface active:scale-95 transition-all flex items-center justify-center gap-1.5" onclick="triggerQuickAction('1:1 Coffee invite drafted for Maya!')">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+<span class="font-label-md text-label-md truncate">1:1 Coffee</span>
+</button>
+<button class="h-11 px-space-sm rounded-xl bg-secondary-container text-on-secondary-container hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-sm" id="give-kudos-btn" onclick="sendQuickKudos()">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="font-label-md text-label-md truncate">Give Kudos</span>
+</button>
+</div>
+</section>
+<!-- Live Workplace Status & Interactive Mini-Desk Card -->
+<section class="w-full rounded-2xl bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">apartment</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Today's Desk Base</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-lowest text-tertiary font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+        Currently Active
+      </span>
+</div>
+<!-- Mini Visual Floorplan Map Slot -->
+<div class="relative w-full h-36 rounded-xl bg-surface-container-lowest overflow-hidden flex flex-col justify-end p-space-sm">
+<div class="absolute inset-0 bg-cover bg-center opacity-85" data-location="Floor 3 Creative Hub, Silicon Valley Headquarters" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZjOfLfnXr-VDqHlErTjwHF-s-Z8Srj98taB9mz-EB-cR1VWtb5qX1_PGATOdNFUcDY6qinMRvbjznAaKRciQVK-zsOz9uatNydL8FacvQ7d_0fTYFXudvxmw0fDfyU7Bq4nweTMVlLzrCPTsfKBqlnHOuNx5YEVRbiv-BICzRWWqwzEVnBgHGSgwu1p6XAbthbT9UEa_TzTWJAtb9jKwAex7zSSSrhkXzBR9jYNHm')"></div>
+<!-- Gradient Map Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent"></div>
+<!-- Desk Pin Indicator Overlay -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md animate-bounce">
+<span class="material-symbols-outlined text-[18px]">pin_drop</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-inverse-on-surface font-bold">Floor 3 · Desk 3B-14</p>
+<p class="font-label-sm text-label-sm text-surface-container-highest">Creative Pod · Near East Sunroom</p>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm transition-transform active:scale-95" data-path="office-map" href="#">
+<span>Open Map</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Icebreaker Topics / Ask Me About -->
+<section class="w-full flex flex-col gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">lightbulb</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Ask Me About...</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors hover:bg-primary-fixed">
+<span>🎨</span>
+<span>Figma Variables</span>
+</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors hover:bg-primary-fixed">
+<span>☕</span>
+<span>Specialty Pour-over Coffee</span>
+</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors hover:bg-primary-fixed">
+<span>🛸</span>
+<span>Hard Sci-Fi Novels</span>
+</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors hover:bg-primary-fixed">
+<span>🐕</span>
+<span>Rescue Dog Rehabilitation</span>
+</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors hover:bg-primary-fixed">
+<span>🪴</span>
+<span>Hydroponic Basil</span>
+</span>
+</div>
+</section>
+<!-- Dream Job / Alternate Universe Story Backstory -->
+<section class="w-full rounded-2xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm shadow-sm transition-all duration-300" id="backstory-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" id="backstory-icon">travel_explore</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold" id="backstory-title">Alternate Universe Story</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" id="backstory-badge">
+        Dream Reality
+      </span>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed" id="backstory-quote">
+        “If I wasn't designing UI patterns and design systems, I'd be managing a hydroponic greenhouse bio-dome on an orbital research station. Favorite celestial body: <strong>Europa</strong> (for the icy oceans).”
+      </p>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">eco</span>
+        Bio-Dome Spec: Tier 4 Hydro Station
+      </span>
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+        Inspired by ‘The Expanse’
+      </span>
+</div>
+</section>
+<!-- Recognition & Kudos Wall -->
+<section class="w-full rounded-2xl bg-surface-container-lowest p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Kudos &amp; Badges</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">44 Received</span>
+</div>
+<!-- Badge Showcase Chips -->
+<div class="flex flex-wrap gap-space-xs">
+<div class="px-3 py-1.5 rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="text-base">🧙‍♂️</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Design Wizard</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14 awarded</span>
+</div>
+</div>
+<div class="px-3 py-1.5 rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="text-base">💖</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Culture Champ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">22 awarded</span>
+</div>
+</div>
+<div class="px-3 py-1.5 rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="text-base">🦉</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Night Owl</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8 awarded</span>
+</div>
+</div>
+</div>
+<!-- Recent Warm Kudos Note -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shrink-0" data-alt="Profile headshot of Alex Rivera, a friendly product manager with glasses smiling in a modern office setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1E_L03-XbaVM0mCJweb6n9R2LqmoCCYA5MLIkHSpUF3YIopsz6r_HzQP5EJFR06-ELhXM5CmqAAkiq6BOtjZg5qfnU1M8mepsur5_Elp-w-iZz3jDGhmHUQSIi74i3FykGKYhadbzG5H37sHtjNPpPJ8jlZX8f1SuA4pqLR4t5NCguEM7oO2r37Lelkum1vzeG0pTh7O2S2FJZYIj60a4b4XkTlisuLCsGPNRqrZ_"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold">Alex Rivera · Product Lead</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday at 4:15 PM</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+        “Maya completely revamped our team onboarding flow in record time, and surprise-delivered vegan donuts to Floor 3! True team superstar.”
+      </p>
+<div class="flex items-center gap-2 mt-1">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-transform" onclick="reactToKudos(this)">
+<span>❤️</span>
+<span class="kudos-count">19</span>
+</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-transform" onclick="reactToKudos(this)">
+<span>🍩</span>
+<span class="kudos-count">12</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Active Projects & Squads -->
+<section class="w-full rounded-2xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm shadow-sm mb-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Current Focus &amp; Sprints</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Q3 Sprint 4</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Project Item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Design Systems 2.0</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Standardizing token ramp &amp; high-contrast assets</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shrink-0">90% Done</span>
+</div>
+<!-- Project Item 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Mobile V3 Launch</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Polishing colleague presence &amp; map gestures</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shrink-0">In Review</span>
+</div>
+</div>
+</section>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-lg pointer-events-none opacity-0 transition-opacity duration-300 z-50 flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span id="toast-text">Action recorded!</span>
+</div>
+</div>
+<script>
+  let currentPersona = 'real';
+
+  function setPersona(mode) {
+    if (currentPersona === mode) return;
+    currentPersona = mode;
+
+    const realBtn = document.getElementById('toggle-real-btn');
+    const alterBtn = document.getElementById('toggle-alter-btn');
+    const avatarReal = document.getElementById('avatar-real');
+    const avatarAlter = document.getElementById('avatar-alter');
+    const roleTag = document.getElementById('role-tag');
+    const profileTitle = document.getElementById('profile-title');
+    const profileSubtitle = document.getElementById('profile-subtitle');
+    const presenceBadge = document.getElementById('presence-badge');
+    const backstoryCard = document.getElementById('backstory-card');
+    const backstoryTitle = document.getElementById('backstory-title');
+    const backstoryIcon = document.getElementById('backstory-icon');
+    const backstoryBadge = document.getElementById('backstory-badge');
+
+    if (mode === 'alter') {
+      // Toggle Switch styles
+      realBtn.className = 'flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-all';
+      alterBtn.className = 'flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-secondary-container bg-secondary-container shadow-sm flex items-center justify-center gap-1.5 transition-all';
+
+      // Crossfade avatar
+      avatarReal.classList.add('opacity-0');
+      avatarAlter.classList.remove('opacity-0');
+
+      // Update Alter Ego metadata
+      roleTag.innerText = 'Cosmic Fleet';
+      roleTag.className = 'px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm';
+      profileTitle.innerText = 'Chief Astrobiologist 🚀';
+      profileTitle.className = 'font-title-md text-title-md text-secondary font-bold';
+      profileSubtitle.innerText = 'Cultivating hydroponic strawberries on Mars orbit while redesigning gravity sensors.';
+
+      presenceBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span><span>Orbiting Floor 3</span>';
+      presenceBadge.className = 'absolute bottom-1.5 right-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 shadow-sm';
+
+      backstoryCard.classList.add('bg-surface-container-high');
+      backstoryTitle.innerText = 'Station Mission Log · Sol 304';
+      backstoryIcon.innerText = 'rocket_launch';
+      backstoryIcon.className = 'material-symbols-outlined text-secondary text-[20px]';
+      backstoryBadge.innerText = 'Simulated Persona';
+
+      showToast('🚀 Alter Ego activated: Chief Astrobiologist!');
+    } else {
+      // Revert to Real Identity
+      realBtn.className = 'flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1.5 transition-all';
+      alterBtn.className = 'flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-all';
+
+      avatarReal.classList.remove('opacity-0');
+      avatarAlter.classList.add('opacity-0');
+
+      roleTag.innerText = 'UX Core';
+      roleTag.className = 'px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm';
+      profileTitle.innerText = 'Senior Product Designer';
+      profileTitle.className = 'font-title-md text-title-md text-primary font-semibold';
+      profileSubtitle.innerText = 'Focusing on design tokens, mobile fluidity, and frictionless user rituals.';
+
+      presenceBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span><span>In Office</span>';
+      presenceBadge.className = 'absolute bottom-1.5 right-1.5 px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center gap-1 shadow-sm';
+
+      backstoryCard.classList.remove('bg-surface-container-high');
+      backstoryTitle.innerText = 'Alternate Universe Story';
+      backstoryIcon.innerText = 'travel_explore';
+      backstoryIcon.className = 'material-symbols-outlined text-primary text-[20px]';
+      backstoryBadge.innerText = 'Dream Reality';
+
+      showToast('👔 Reverted to Real Identity');
+    }
+  }
+
+  function sendQuickKudos() {
+    showToast('🌟 You sent 50 Kudos to Maya Lin!');
+    const btn = document.getElementById('give-kudos-btn');
+    btn.classList.add('scale-110');
+    setTimeout(() => btn.classList.remove('scale-110'), 200);
+  }
+
+  function reactToKudos(btn) {
+    const counter = btn.querySelector('.kudos-count');
+    if (counter) {
+      counter.innerText = parseInt(counter.innerText, 10) + 1;
+      btn.classList.add('scale-110');
+      setTimeout(() => btn.classList.remove('scale-110'), 150);
+    }
+  }
+
+  function triggerQuickAction(msg) {
+    showToast(msg);
+  }
+
+  function triggerShareToast() {
+    showToast('🔗 Maya\'s profile link copied to clipboard!');
+  }
+
+  let toastTimeout;
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = message;
+    toast.classList.remove('opacity-0');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.add('opacity-0');
+    }, 2400);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="office-map" href="#"><span class="material-symbols-outlined text-[24px]">map</span><span class="font-label-sm text-label-sm">Map</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="company-feed" href="#"><span class="material-symbols-outlined text-[24px]">forum</span><span class="font-label-sm text-label-sm">Feed</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="dream-ai" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[8px] leading-tight shadow-sm">AI</span></div><span class="font-label-sm text-label-sm">Dream AI</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
